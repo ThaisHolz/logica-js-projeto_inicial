@@ -1,11 +1,11 @@
 alert('Bem vindo ao jogo do número secreto!');
-let numeroSecreto = 21;
-console.log(`É o número ${numeroSecreto}`);
+let numeroSecreto = parseInt(Math.random() * 100 + 1);
+//console.log(`É o número ${numeroSecreto}`);
 let chute;
 let tentativas = 1;
 
 while(chute != numeroSecreto){
-    chute = prompt('Escolha um número entre 1 e 30:');
+    chute = prompt('Escolha um número entre 1 e 100:');
     if (numeroSecreto == chute){
         break;
     }
@@ -24,5 +24,3 @@ while(chute != numeroSecreto){
 let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
 
 alert(`Você acertou! É o número ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`);
-
-
